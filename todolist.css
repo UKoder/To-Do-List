@@ -55,5 +55,44 @@
 }
 
 .js-dueDate {
-  padding: 9px;
+  padding: 10px;
+}
+
+@media (max-width: 505px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .js-todo,
+  .todo-head {
+    display: grid;
+    grid-template-columns: 150px 100px 70px;
+    row-gap: 20px;
+    align-items: center;
+    column-gap: 20px;
+    justify-content: center;
+  }
+
+  .js-dueDate {
+    font-size: 10px;
+  }
+}
+@media (max-width: 370px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .js-todo,
+  .todo-head {
+    display: grid;
+    grid-template-columns: 80px 100px 70px;
+    row-gap: 20px;
+    align-items: center;
+    column-gap: 20px;
+    justify-content: center;
+  }
+
+  .js-dueDate {
+    font-size: 8px;
+  }
 }
