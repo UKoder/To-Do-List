@@ -24,7 +24,8 @@ function addTodo() {
 
 function renderTodo() {
   let html = "";
-  for (let i = 0; i < todo.length; i++) {
+
+  /*for (let i = 0; i < todo.length; i++) {
     html += `
     <div>${todo[i].name}</div>
     <div>${todo[i].dueDate}</div>
@@ -33,6 +34,18 @@ function renderTodo() {
     localStorage.setItem('todo', JSON.stringify(todo));
     renderTodo();"
     class='js-delBtn'>Delete</button>`;
-  }
+  }*/
+
+  todo.forEach(function (value, index) {
+    html += `
+    <div>${value.name}</div>
+    <div>${value.dueDate}</div>
+    <button onclick = "
+    todo.splice(${index},1);
+    localStorage.setItem('todo', JSON.stringify(todo));
+    renderTodo();"
+    class='js-delBtn'>Delete</button>`;
+  });
+
   document.querySelector(".js-todo").innerHTML = html;
 }
