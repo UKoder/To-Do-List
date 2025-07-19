@@ -36,7 +36,7 @@ function renderTodo() {
     class='js-delBtn'>Delete</button>`;
   }*/
 
-  todo.forEach(function (value, index) {
+  todo.forEach((value, index) => {
     html += `
     <div>${value.name}</div>
     <div>${value.dueDate}</div>
